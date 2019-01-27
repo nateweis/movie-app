@@ -6,6 +6,9 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT;
 
+// sessions
+const session = require('express-session')
+
 // method override
 const methodOverride = require('method-override');
 
@@ -27,10 +30,20 @@ db.on('open',() => {
 app.use(express.urlencoded({extended:false}));
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
+app.use(session({
+  secret:process.env.SECRET,
+  resave:false,
+  saveUninitialized: false
+}))
 
 // the routs
+// main
 const movieRouts = require('./controller/movie-routs.js');
 app.use('/movies',movieRouts)
+
+// user add
+const userRouts = require('./controller/user-rout.js')
+app.use('/user',userRouts)
 
 
 

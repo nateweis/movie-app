@@ -5,7 +5,8 @@ const Movie = require('../models/movies.js');
 // opening index page
 router.get('/',(req,res) => {
   Movie.find({},(err,data) => {
-    res.render('./app/index.ejs',{allMovies:data})
+    res.render('./app/index.ejs',{allMovies:data,
+    currentUser: req.session.currentUser})
   })
 })
 

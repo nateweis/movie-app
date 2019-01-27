@@ -1,0 +1,25 @@
+<%if(!currentUser){ %>
+  <button class="userBtn" id="sign-up">Sign up</button>
+  <button class="userBtn" id="login">Login</button>
+
+  <div class="modal signup">
+    <form class="userForm" action="/user" method="post">
+      <h4>Sign Up</h4>
+      Username: <input type="text" name="username"> <br>
+      Password: <input type="password" name="password"> <br>
+      <input type="submit">
+    </form>
+  </div>
+  <div class="modal login">
+    <form class="userForm" action="/user/login" method="post">
+      <h4>Log In</h4>
+      Username: <input type="text" name="username"> <br>
+      Password: <input type="password" name="password"> <br>
+      <input type="submit">
+    </form>
+  </div>
+  <%}else{%>
+    <form class="" action="/user?_method=DELETE" method="post">
+      <input type="submit" value="Log Out">
+    </form>
+    <%}%>
