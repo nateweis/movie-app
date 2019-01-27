@@ -6,7 +6,7 @@ const movieSchema = new mongoose.Schema({
   starring:[String],
   img:[String],
   catigory:[String],
-  favoites:Boolean,
+  favoites:{type:Boolean, default:false},
   runtime:{type:Number, default:130},
   movieDescription: String,
   addedBy:String,
