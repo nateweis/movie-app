@@ -10,6 +10,16 @@ router.get('/',(req,res) => {
   })
 })
 
+router.get('/categories/:name',(req,res) => {
+  Movie.find({},(err,data) => {
+    res.render('./app/catigoryIndex.ejs',{
+      allMovies:data,
+      currentUser:req.session.currentUser,
+      selectedCatigory:req.params.name
+    })
+  })
+})
+
 // basic show page (watch movie pg)
 router.get('/:id',(req,res) => {
   // im using a find rout instead of find by id bec i want to
