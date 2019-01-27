@@ -19,7 +19,8 @@
     <%for(let i = 0; i < allMovies.length; i++){ %>
       <h3><%=allMovies[i].title%></h3>
       <div class="movies">
-        <img src="<%=allMovies[i].img[0]%>" alt="">
+        <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
+
       </div>
       <%}%>
   </body>

@@ -6,5 +6,10 @@
   </head>
   <body>
     <h1>Show PAge</h1>
+    <% for(let i = 0; i < allMovies.length; i++){
+    if(allMovies[i].id === selectedMovie){%>
+      <img src="<%=allMovies[i].img[1]%>" alt="">
+      <p><%=allMovies[i].movieDescription%></p>
+      <%}}%>
   </body>
 </html>

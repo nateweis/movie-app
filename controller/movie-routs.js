@@ -9,9 +9,15 @@ router.get('/',(req,res) => {
   })
 })
 
-// basic show page
+// basic show page (watch movie pg)
 router.get('/:id',(req,res) => {
-  res.render('./app/show.ejs')
+  // im using a find rout instead of find by id bec i want to
+  // keep the movie select nav bar active on everypage and i need access
+  // to all movies for that
+  Movie.find({}, (err,data) => {
+    res.render('./app/show.ejs',{allMovies:data,
+    selectedMovie:req.params.id})
+  })
 })
 
 
