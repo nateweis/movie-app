@@ -8,5 +8,15 @@
   <body>
     <h1><%=currentUser.username%>'s page</h1>
     <button><a href="/movies/new">Upload Movie </a></button>
+    <h2>Movies You Submited</h2>
+    <%for (let i = 0; i < allMovies.length; i++) {
+      if(allMovies[i].addedBy === currentUser.username){ %>
+        <h3><%=allMovies[i].title%></h3>
+        <div class="movies">
+          <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
+
+        </div>
+    <%} }%>
+
   </body>
 </html>

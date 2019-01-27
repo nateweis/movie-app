@@ -55,7 +55,10 @@ router.get('/:id',(req,res) => {
 // ///////////// Not Get routs
 router.post('/',(req,res) => {
   req.body.addedBy = req.session.currentUser.username;
-  req.body.stars = Number(req.body.stars)
+  req.body.stars = Number(req.body.stars);
+  Movie.create(req.body, (err,data) => {
+    res.redirect('/movies/userpg')
+  })
 })
 
 
