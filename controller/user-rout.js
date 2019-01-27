@@ -16,11 +16,13 @@ router.post('/',(req,res) => {
 // logging userin
 router.post('/login',(req,res) => {
   User.findOne({username:req.body.username},(err,data) => {
-    if(!data){alert("Wrong Username/Password")}
+    if(!data){res.send('<a href="/movies">Wrong Username</a>')}
     else if(bcrypt.compareSync(req.body.password, data.password)){
       req.session.currentUser = data;
       res.redirect('/movies')
-    }else{alert("Wrong Username/Password")}
+    }else{
+      res.send('<a href="/movies">Wrong Password</a>')
+    }
   })
 })
 

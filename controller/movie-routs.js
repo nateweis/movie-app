@@ -10,6 +10,7 @@ router.get('/',(req,res) => {
   })
 })
 
+// category index page
 router.get('/categories/:name',(req,res) => {
   Movie.find({},(err,data) => {
     res.render('./app/catigoryIndex.ejs',{
@@ -18,6 +19,21 @@ router.get('/categories/:name',(req,res) => {
       selectedCatigory:req.params.name
     })
   })
+})
+
+// special user index page
+router.get('/userpg',(req,res) => {
+  Movie.find({},(err,data) => {
+    res.render('./app/userpg.ejs',{
+      allMovies:data,
+      currentUser: req.session.currentUser
+    })
+  })
+})
+
+// upload a movie create
+router.get('/new',(req,res) => {
+  res.render('./app/new.ejs')
 })
 
 // basic show page (watch movie pg)
@@ -36,7 +52,11 @@ router.get('/:id',(req,res) => {
 
 
 
-
+// ///////////// Not Get routs
+router.post('/',(req,res) => {
+  req.body.addedBy = req.session.currentUser.username;
+  req.body.stars = Number(req.body.stars)
+})
 
 
 

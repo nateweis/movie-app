@@ -3,11 +3,58 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style media="screen">
+      label{
+        display: block;
+      }
+    </style>
   </head>
   <body>
     <h1>New page</h1>
-    <form action="index.html" method="post">
+    <form action="/movies" method="post">
+      <label for="">Title:</label>
+       <input type="text" name="title">
 
+       <label for="">Star Rating:</label>
+       <select name="stars">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+
+      <label for="">Writer:</label>
+       <input type="text" name="writer">
+
+       <label for="">Staring:</label>
+       <input type="button" value="Add another Actor/Actress" title="starring">
+      <input type="text" name="starring">
+
+      <label for="">Picture:</label>
+       <input type="button" value="Add another Button" title="img">
+      <input type="text" name="img">
+
+      <label for="">Categories:</label>
+      <input type="button" value="Add a Category" title="catigory">
+      <input type="text" name="catigory">
+
+      <label for="">Runtime:</label>
+      <input type="number" name="runtime" placeholder="130">
+
+      <label for="">Description:</label>
+      <textarea name="movieDescription" rows="8" cols="80"></textarea>
+
+      <label for="">Relese Year:</label>
+      <input type="number" name="year" placeholder="2019">
+
+      <label for="">Rated:</label>
+      <select name="rated">
+        <option value="R">R</option>
+        <option value="PG-13">PG-13</option>
+        <option value="PG">PG</option>
+        <option value="G">G</option>
+      </select>
     </form>
   </body>
 </html>
