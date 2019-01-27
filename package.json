@@ -1,0 +1,28 @@
+{
+  "name": "movie-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nateweis/movie-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nateweis/movie-app/issues"
+  },
+  "homepage": "https://github.com/nateweis/movie-app#readme",
+  "dependencies": {
+    "dotenv": "^6.2.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.4.7",
+    "nodemon": "^1.18.9"
+  }
+}
