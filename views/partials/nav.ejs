@@ -1,4 +1,35 @@
 <nav>
+<h4>Categories</h4>
+<%const catigoryArr = []
+  for (let i = 0; i < allMovies.length; i++) {
+    for (let j = 0;j < allMovies[i].catigory.length; j++) {
+      if(catigoryArr.indexOf(allMovies[i].catigory[j]) === -1){
+        catigoryArr.push(allMovies[i].catigory[j])
+      }
+    }
+  }
+  catigoryArr.sort()
+ %>
+
+<% for (let target of catigoryArr) { %>
+  <a href="#"><%=target%></a>
+<%} %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </nav>
 
