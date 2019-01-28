@@ -1,0 +1,26 @@
+.side{
+  float: right;
+}
+.modal{
+    display: none;
+    width:150px;
+    height: 200px;
+    border: 2px solid black;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+  }
+span{
+  float: right;
+}
+.nav, .drop-1{
+  display: flex;
+  justify-content: space-around;
+  border: 2px solid black;
+}
+.nav div{
+  border: 1px solid black;
+}
+.hidden{
+  display: none;
+}

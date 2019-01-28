@@ -1,32 +1,47 @@
 <nav>
-<h4>Categories</h4>
-<%const catigoryArr = []
-  for (let i = 0; i < allMovies.length; i++) {
-    for (let j = 0;j < allMovies[i].catigory.length; j++) {
-      if(catigoryArr.indexOf(allMovies[i].catigory[j]) === -1){
-        catigoryArr.push(allMovies[i].catigory[j])
+  <div class="nav">
+    <div class="">
+      <h4><a href="/movies">Home</a></h4>
+    </div>
+
+    <div class="search">
+      <h4>Search</h4>
+    </div>
+
+    <%if(currentUser){ %>
+      <div class="">
+        <h4><a href="/movies/userpg">User</a> </h4>
+      </div>
+    <%}%>
+  </div>
+
+  <div class="hidden drop-1">
+    <div><h4>Categories</h4></div>
+    <div><h4>Year</h4></div>
+    <div><h4>Rating</h4></div>
+
+    <%if(currentUser){ %>
+    <div><h4>Favorits</h4></div>
+    <%}%>
+
+  </div>
+
+  <div class="hidden drop-2">
+    <%const catigoryArr = []
+      for (let i = 0; i < allMovies.length; i++) {
+        for (let j = 0;j < allMovies[i].catigory.length; j++) {
+          if(catigoryArr.indexOf(allMovies[i].catigory[j]) === -1){
+            catigoryArr.push(allMovies[i].catigory[j])
+          }
+        }
       }
-    }
-  }
-  catigoryArr.sort()
- %>
+      catigoryArr.sort()
+     %>
 
-<% for (let target of catigoryArr) { %>
-  <a href="/movies/categories/<%=target%>"><%=target%></a>
-<%} %>
-
-
-<%if(currentUser){ %>
-  <h4><a href="/movies/userpg">User</a> </h4>
-  <%}%>
-
-
-
-
-
-
-
-
+    <% for (let target of catigoryArr) { %>
+      <a href="/movies/categories/<%=target%>"><%=target%></a>
+    <%} %>
+  </div>
 
 
 

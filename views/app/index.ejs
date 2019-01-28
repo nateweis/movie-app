@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <title></title>
     <%include ../partials/head.ejs %>
-  <script src="/js/user.js" charset="utf-8"></script>
   </head>
   <body>
-    <h1>Index page</h1>
     <%include ../partials/user-btn.ejs %>
+    <h1>Index page</h1>
+    <%include ../partials/nav.ejs %>
+    <hr>
 
     <%for(let i = 0; i < allMovies.length; i++){ %>
       <h3><%=allMovies[i].title%></h3>
@@ -17,7 +18,5 @@
 
       </div>
       <%}%>
-      <hr>
-      <%include ../partials/nav.ejs %>
   </body>
 </html>
