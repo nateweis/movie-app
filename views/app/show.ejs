@@ -4,11 +4,35 @@
     <meta charset="utf-8">
     <title></title>
   </head>
+  <%include ../partials/head.ejs %>
+  <link rel="stylesheet" href="/css/show.css">
   <body>
-    <h1>Show PAge</h1>
+    <%include ../partials/user-btn.ejs %>
+
+    <!-- makes sure to only select the movie we want -->
     <% for(let i = 0; i < allMovies.length; i++){
-    if(allMovies[i].id === selectedMovie){%>
-      <img src="<%=allMovies[i].img[1]%>" alt="">
+      if(allMovies[i].id === selectedMovie){%>
+    <h1>Watch <%=allMovies[i].title%></h1>
+    <%include ../partials/nav.ejs %>
+    <div class="screen">
+      <!-- slects last img in arr -->
+      <%const j = allMovies[i].img.length -1 %>
+      <!-- the "screen" -->
+      <span class="darken">
+        <input type="range" class="slider">
+        <p class="runtime"><%=allMovies[i].runtime%></p>
+      </span>
+      <img src="<%=allMovies[i].img[j]%>" alt="">
+    </div>
+      <p>Written By: <%=allMovies[i].writer%></p>
+      <p>
+        Starring: <%if(allMovies[i].starring.length > 1){
+          for(let j = 0; j < allMovies[i].starring.length; j++){%>
+          |  <%=allMovies[i].starring[j]%> |
+          <%}}else{%>
+            <%=allMovies[i].starring%>
+            <%}%>
+      </p>
       <p><%=allMovies[i].movieDescription%></p>
       <%}}%>
   </body>

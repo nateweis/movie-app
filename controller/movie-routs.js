@@ -71,8 +71,11 @@ router.get('/:id',(req,res) => {
   // keep the movie select nav bar active on everypage and i need access
   // to all movies for that
   Movie.find({}, (err,data) => {
-    res.render('./app/show.ejs',{allMovies:data,
-    selectedMovie:req.params.id})
+    res.render('./app/show.ejs',{
+      allMovies:data,
+      selectedMovie:req.params.id,
+      currentUser:req.session.currentUser
+  })
   })
 })
 

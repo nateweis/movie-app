@@ -1,0 +1,25 @@
+.screen{
+  width:80%;
+  height: 300px;
+  margin: 50px auto;
+}
+.darken{
+  background: rgba(0,0,0,0.6);
+  position: absolute;
+  width:80%;
+  height:300px;
+  z-index: 4;
+}
+.slider{
+  position: relative;
+  width:70%;
+  top: 90%;
+  left:10%;
+}
+.runtime{
+  display: inline;
+  color: white;
+  position: relative;
+  top:89%;
+  left:10%;
+}
