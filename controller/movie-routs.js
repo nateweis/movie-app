@@ -21,6 +21,28 @@ router.get('/categories/:name',(req,res) => {
   })
 })
 
+// year index page
+router.get('/year/:str',(req,res) => {
+  Movie.find({},(err,data) => {
+    res.render('./app/yearIndex.ejs',{
+      allMovies:data,
+      currentUser:req.session.currentUser,
+      selectedYear: req.params.str
+    })
+  })
+})
+
+// rating index page
+router.get('/rating/:str',(req,res) => {
+  Movie.find({},(err,data) => {
+    res.render('./app/ratedIndex.ejs',{
+      allMovies:data,
+      currentUser:req.session.currentUser,
+      selectedRating: req.params.str
+    })
+  })
+})
+
 // special user index page
 router.get('/userpg',(req,res) => {
   Movie.find({},(err,data) => {

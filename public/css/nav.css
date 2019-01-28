@@ -13,10 +13,12 @@
 span{
   float: right;
 }
-.nav, .drop-1{
+.nav, .drop-1, .drop-2{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
   border: 2px solid black;
+  padding:0 20px;
 }
 .nav div{
   border: 1px solid black;
