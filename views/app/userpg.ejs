@@ -16,6 +16,10 @@
           <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
 
         </div>
+        <form action="/movies/<%=allMovies[i].id%>?_method=DELETE" method="post">
+          <input type="submit" value="Remove">
+        </form>
+        <button><a href="/movies/edit/<%=allMovies[i].id%>">Edit</a></button>
     <%} }%>
 
   </body>

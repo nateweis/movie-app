@@ -31,6 +31,13 @@ router.get('/userpg',(req,res) => {
   })
 })
 
+// edit movie
+router.get('/edit/:id',(req,res) => {
+  Movie.findById(req.params.id, (err,data) => {
+    res.render('./app/edit.ejs',{movie:data})
+  })
+})
+
 // upload a movie create
 router.get('/new',(req,res) => {
   res.render('./app/new.ejs')
@@ -61,7 +68,19 @@ router.post('/',(req,res) => {
   })
 })
 
+// delete the movie
+router.delete('/:id',(req,res) => {
+  Movie.findByIdAndRemove(req.params.id, (err,data) => {
+    res.redirect('/movies/userpg')
+  })
+})
 
+// edit movie
+router.put('/:id',(req,res) => {
+  Movie.findByIdAndUpdate(req.params.id, req.body, (err,data) => {
+    res.redirect('/movies/userpg')
+  })
+})
 
 
 
