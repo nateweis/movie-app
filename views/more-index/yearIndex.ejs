@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <%include ../partials/head.ejs %>
+  </head>
+  <body>
+  <div class="container">
+    <%include ../partials/user-btn.ejs %>
+      <h1>Movies from <%=selectedYear%></h1>
+      <%include ../partials/nav.ejs %>
+      <%for (let i = 0; i < allMovies.length; i++) {
+        if(allMovies[i].year === Number(selectedYear)){ %>
+          <div class="movies">
+            <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
+
+          </div>
+      <%}} %>
+  </div>
+  </body>
+</html>

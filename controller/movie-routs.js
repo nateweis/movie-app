@@ -13,7 +13,7 @@ router.get('/',(req,res) => {
 // category index page
 router.get('/categories/:name',(req,res) => {
   Movie.find({},(err,data) => {
-    res.render('./app/catigoryIndex.ejs',{
+    res.render('./more-index/catigoryIndex.ejs',{
       allMovies:data,
       currentUser:req.session.currentUser,
       selectedCatigory:req.params.name
@@ -24,7 +24,7 @@ router.get('/categories/:name',(req,res) => {
 // year index page
 router.get('/year/:str',(req,res) => {
   Movie.find({},(err,data) => {
-    res.render('./app/yearIndex.ejs',{
+    res.render('./more-index/yearIndex.ejs',{
       allMovies:data,
       currentUser:req.session.currentUser,
       selectedYear: req.params.str
@@ -35,7 +35,7 @@ router.get('/year/:str',(req,res) => {
 // rating index page
 router.get('/rating/:str',(req,res) => {
   Movie.find({},(err,data) => {
-    res.render('./app/ratedIndex.ejs',{
+    res.render('./more-index/ratedIndex.ejs',{
       allMovies:data,
       currentUser:req.session.currentUser,
       selectedRating: req.params.str
@@ -49,6 +49,16 @@ router.get('/userpg',(req,res) => {
     res.render('./app/userpg.ejs',{
       allMovies:data,
       currentUser: req.session.currentUser
+    })
+  })
+})
+
+// users favorites index page
+router.get('/favorites',(req,res) => {
+  Movie.find({},(err,data) => {
+    res.render('./more-index/faveIndex.ejs',{
+      allMovies:data,
+      currentUser:req.session.currentUser
     })
   })
 })

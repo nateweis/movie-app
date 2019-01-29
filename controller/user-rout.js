@@ -4,6 +4,7 @@ const bcrypt = require('bcrypt')
 const User = require('../models/user.js')
 
 
+
 // adding user
 router.post('/',(req,res) => {
   // encrypting the password
