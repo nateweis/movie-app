@@ -4,14 +4,14 @@
   margin: 50px auto;
 }
 .darken{
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
   position: absolute;
-  width:80%;
+  width:72%;
   height:300px;
   z-index: 4;
 }
 .slider{
-  position: relative;
+  position: absolute;
   width:70%;
   top: 90%;
   left:10%;
@@ -19,7 +19,14 @@
 .runtime{
   display: inline;
   color: white;
-  position: relative;
-  top:89%;
-  left:10%;
+  position: absolute;
+  top:85%;
+  left:83%;
+}
+
+.fave{
+  background: blue;
+}
+.not-fave{
+  background: red;
 }

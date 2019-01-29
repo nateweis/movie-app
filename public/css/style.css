@@ -1,8 +1,29 @@
+body{
+  background-image: linear-gradient(to right, black , rgb(0,30,0));
+  color:#ddd;
+}
+.container{
+  width:90%;
+  margin: 0 auto;
+}
 .movies{
   width:100px;
   height:150px;
+  display: inline-block;
+  padding-left: 50px;
+  padding-top: 50px;
 }
   img{
     width:100%;
     height: 100%;
   }
+a{
+  text-decoration: none;
+  color: #ddd;
+}
+
+/* .movie-hover{
+  background: #fff;
+  width:100px;
+  height:150px;
+} */

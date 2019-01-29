@@ -7,33 +7,52 @@
   <%include ../partials/head.ejs %>
   <link rel="stylesheet" href="/css/show.css">
   <body>
-    <%include ../partials/user-btn.ejs %>
+    <div class="container">
+      <%include ../partials/user-btn.ejs %>
 
-    <!-- makes sure to only select the movie we want -->
-    <% for(let i = 0; i < allMovies.length; i++){
-      if(allMovies[i].id === selectedMovie){%>
-    <h1>Watch <%=allMovies[i].title%></h1>
-    <%include ../partials/nav.ejs %>
-    <div class="screen">
-      <!-- slects last img in arr -->
-      <%const j = allMovies[i].img.length -1 %>
-      <!-- the "screen" -->
-      <span class="darken">
-        <input type="range" class="slider">
-        <p class="runtime"><%=allMovies[i].runtime%></p>
-      </span>
-      <img src="<%=allMovies[i].img[j]%>" alt="">
+      <!-- makes sure to only select the movie we want -->
+      <% for(let i = 0; i < allMovies.length; i++){
+        if(allMovies[i].id === selectedMovie){%>
+      <h1>Watch <%=allMovies[i].title%></h1>
+      <%include ../partials/nav.ejs %>
+      <div class="screen">
+        <!-- slects last img in arr -->
+        <%const j = allMovies[i].img.length -1 %>
+        <!-- the "screen" -->
+        <span class="darken">
+          <!-- fovrite btn -->
+          <%if(currentUser){
+            let match = false;
+            for(let j = 0; j < currentUser.favorites.length;j++){
+              if(allMovies[i].title === currentUser.favorites[j]){
+                match = true;
+              }}%>
+              <%if(match !== true){ %>
+                <form  action="/user/<%=currentUser.username%>/<%=allMovies[i].title%>?_method=PUT" method="post">
+                  <button class="not-fave" type="submit" name="button">+</button>
+                </form>
+                <%}else{%>
+            <form  action="/user/fave/<%=currentUser.username%>/<%=allMovies[i].title%>?_method=PUT" method="post">
+              <button class="fave" type="submit" name="button">+</button>
+            </form>
+          <%}}%>
+
+          <input type="range" class="slider">
+          <p class="runtime"><%=allMovies[i].runtime%></p>
+        </span>
+        <img src="<%=allMovies[i].img[j]%>" alt="">
+      </div>
+        <p>Written By: <%=allMovies[i].writer%></p>
+        <p>
+          Starring: <%if(allMovies[i].starring.length > 1){
+            for(let j = 0; j < allMovies[i].starring.length; j++){%>
+            |  <%=allMovies[i].starring[j]%> |
+            <%}}else{%>
+              <%=allMovies[i].starring%>
+              <%}%>
+        </p>
+        <p><%=allMovies[i].movieDescription%></p>
+        <%}}%>
     </div>
-      <p>Written By: <%=allMovies[i].writer%></p>
-      <p>
-        Starring: <%if(allMovies[i].starring.length > 1){
-          for(let j = 0; j < allMovies[i].starring.length; j++){%>
-          |  <%=allMovies[i].starring[j]%> |
-          <%}}else{%>
-            <%=allMovies[i].starring%>
-            <%}%>
-      </p>
-      <p><%=allMovies[i].movieDescription%></p>
-      <%}}%>
   </body>
 </html>

@@ -67,6 +67,7 @@ router.get('/new',(req,res) => {
 
 // basic show page (watch movie pg)
 router.get('/:id',(req,res) => {
+  console.log(req.session.currentUser);
   // im using a find rout instead of find by id bec i want to
   // keep the movie select nav bar active on everypage and i need access
   // to all movies for that
@@ -92,6 +93,7 @@ router.post('/',(req,res) => {
     res.redirect('/movies/userpg')
   })
 })
+
 
 // delete the movie
 router.delete('/:id',(req,res) => {

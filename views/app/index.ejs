@@ -6,17 +6,19 @@
     <%include ../partials/head.ejs %>
   </head>
   <body>
+  <div class="container">
     <%include ../partials/user-btn.ejs %>
     <h1>Index page</h1>
     <%include ../partials/nav.ejs %>
-    <hr>
+
 
     <%for(let i = 0; i < allMovies.length; i++){ %>
-      <h3><%=allMovies[i].title%></h3>
+      <span class="movie-hover"></span>
       <div class="movies">
         <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
 
       </div>
       <%}%>
+  </div>
   </body>
 </html>

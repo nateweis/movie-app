@@ -3,26 +3,37 @@
 }
 .modal{
     display: none;
-    width:150px;
+    width:300px;
     height: 200px;
-    border: 2px solid black;
     position: fixed;
     top: 10%;
-    left: 50%;
+    left: 30%;
+    z-index: 10;
+    background: url('/img/background5.jpeg');
+    border: 2px solid #ddd;
+  }
+  .userForm{
+    width:200px;
+    margin-left: 80px;
+  }
+  .userForm input{
+    display: block;
   }
 .x{
   float: right;
 }
 .nav, .drop-1, .drop-2{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  border: 2px solid black;
-  padding:0 20px;
-}
-.nav div{
-  border: 1px solid black;
+  padding:0 40px;
+  width:70%;
+  margin: 0 auto;
+  background-image: linear-gradient(to left, black, rgb(0,50,0));
 }
 .hidden{
   display: none;
+}
+.flex-item{
+  padding: 0 20px;
 }
