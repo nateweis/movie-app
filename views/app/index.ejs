@@ -13,12 +13,8 @@
 
 
     <%for(let i = 0; i < allMovies.length; i++){ %>
-
-      <div class="movies">
-        <a href="/movies/<%=allMovies[i].id%>"><span class="movie-hover"></span></a>
-        <img src="<%=allMovies[i].img[0]%>" alt="">
-
-        <!-- <span class="bottom"> <%=allMovies[i].title%></span> -->
+      <div class="movie-box">
+        <%include ../partials/movie-display.ejs %>
       </div>
       <%}%>
   </div>

@@ -13,11 +13,11 @@
       <%for (let i = 0; i < allMovies.length; i++) {
         for (let j = 0; j < currentUser.favorites.length; j++) {
           if(allMovies[i].title === currentUser.favorites[j]){%>
-            <div class="movies">
-              <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
+            <div class="movie-box">
+              <%include ../partials/movie-display.ejs %>
             </div>
           <%}
-        }        
+        }
       } %>
     </div>
   </body>

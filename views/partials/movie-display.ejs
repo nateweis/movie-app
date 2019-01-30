@@ -1,0 +1,21 @@
+
+  <div class="movies">
+    <a href="/movies/<%=allMovies[i].id%>"><span class="movie-hover">
+      <%if(currentUser){
+        let match = false;
+        for(let j = 0; j < currentUser.favorites.length;j++){
+          if(allMovies[i].title === currentUser.favorites[j]){
+            match = true;
+          }}%>
+          <%if(match !== true){ %>
+            <form  action="/user/<%=currentUser.username%>/<%=allMovies[i].title%>?_method=PUT" method="post">
+              <button class="isnt-favorite" type="submit" name="button">+</button>
+            </form>
+            <%}else{%>
+        <form  action="/user/fave/<%=currentUser.username%>/<%=allMovies[i].title%>?_method=PUT" method="post">
+          <button class="favorite" type="submit" name="button">+</button>
+        </form>
+      <%}}%>
+    </span></a>
+    <img src="<%=allMovies[i].img[0]%>" alt="">
+  </div>

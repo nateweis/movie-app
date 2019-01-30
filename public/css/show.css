@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "hollow";
+  src: url('/img/Rainbow Colors - TTF.ttf');
+}
 .screen{
   width:80%;
   height: 300px;
@@ -8,7 +12,7 @@
   position: absolute;
   width:72%;
   height:300px;
-  z-index: 4;
+  z-index: 3;
 }
 .slider{
   position: absolute;
@@ -23,10 +27,45 @@
   top:85%;
   left:83%;
 }
-
-.fave{
-  background: blue;
+.fave, .not-fave{
+  background: none;
+  font-size: 30px;
+  border: none;
+  position: absolute;
+  top: 85%;
+  left: 90%;
+  color: #ddd;
+  outline: none;
+  cursor: pointer;
 }
+
 .not-fave{
-  background: red;
+  font-family: 'hollow';
+  font-size: 50px;
+  top:84%;
+}
+.play-btn{
+  background: black;
+  width:100px;
+  height:70px;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  z-index: 5;
+  border-radius: 10px;
+}
+.triangle{
+  width: 0;
+height: 0;
+border-style: solid;
+border-width: 21px 0 21px 36.4px;
+border-color: transparent transparent transparent #fff;
+
+  position: absolute;
+  top:15%;
+  left: 35%;
+}
+.play-btn:hover{
+  border: 1px solid #ddd;
+  cursor: pointer;
 }
