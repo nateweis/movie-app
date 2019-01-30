@@ -6,21 +6,28 @@
     <%include ../partials/head.ejs %>
   </head>
   <body>
-    <h1><%=currentUser.username%>'s page</h1>
-    <button><a href="/movies/new">Upload Movie </a></button>
-    <h2>Movies You Submited</h2>
-    <%for (let i = 0; i < allMovies.length; i++) {
-      if(allMovies[i].addedBy === currentUser.username){ %>
-        <h3><%=allMovies[i].title%></h3>
-        <div class="movies">
-          <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
+    <div class="container">
+      <%include ../partials/user-btn.ejs %>
+      <h1><%=currentUser.username%>'s page</h1>
+      <%include ../partials/nav.ejs %>
+      <br>
+      <button class="center"><a href="/movies/new">Upload Movie </a></button>
+      <h2 class="center">Movies You Submitted</h2>
+      <%for (let i = 0; i < allMovies.length; i++) {
+        if(allMovies[i].addedBy === currentUser.username){ %>
+        <div class="movie-box">
+          <div class="movies">
+            <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
 
+          </div>
+          <form action="/movies/<%=allMovies[i].id%>?_method=DELETE" method="post">
+            <input type="submit" value="Remove">
+          </form>
+          <button><a href="/movies/edit/<%=allMovies[i].id%>">Edit</a></button>
         </div>
-        <form action="/movies/<%=allMovies[i].id%>?_method=DELETE" method="post">
-          <input type="submit" value="Remove">
-        </form>
-        <button><a href="/movies/edit/<%=allMovies[i].id%>">Edit</a></button>
-    <%} }%>
+
+      <%} }%>
+    </div>
 
   </body>
 </html>

@@ -30,10 +30,21 @@
   width:70%;
   margin: 0 auto;
   background-image: linear-gradient(to left, black, rgb(0,50,0));
+
+}
+.drop-1, .drop-2{
+  animation-duration: .5s;
+  animation-name: slidein;
 }
 .hidden{
   display: none;
 }
 .flex-item{
   padding: 0 20px;
+  cursor: pointer;
+}
+
+@keyframes slidein {
+  0%{position: relative; top: -20px;}
+  100%{position: relative; top: 0px;}
 }

@@ -1,6 +1,14 @@
+@font-face {
+    font-family: 'Header';
+    src:url('/img/AURORA PERSONAL USE.ttf')
+}
 body{
   background-image: linear-gradient(to right, black , rgb(0,30,0));
   color:#ddd;
+}
+.header{
+  font-family: 'Header';
+  font-size: 4em;
 }
 .container{
   width:90%;
@@ -21,9 +29,19 @@ a{
   text-decoration: none;
   color: #ddd;
 }
-
-/* .movie-hover{
-  background: #fff;
-  width:100px;
+.center{
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+.movie-hover{
+  width: 100px;
   height:150px;
-} */
+  position: absolute;
+  z-index: 4;
+}
+
+.movie-hover:hover{
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}

@@ -8,15 +8,17 @@
   <body>
   <div class="container">
     <%include ../partials/user-btn.ejs %>
-    <h1>Index page</h1>
+    <h1 class="header">GiVids</h1>
     <%include ../partials/nav.ejs %>
 
 
     <%for(let i = 0; i < allMovies.length; i++){ %>
-      <span class="movie-hover"></span>
-      <div class="movies">
-        <a href="/movies/<%=allMovies[i].id%>"><img src="<%=allMovies[i].img[0]%>" alt=""></a>
 
+      <div class="movies">
+        <a href="/movies/<%=allMovies[i].id%>"><span class="movie-hover"></span></a>
+        <img src="<%=allMovies[i].img[0]%>" alt="">
+
+        <!-- <span class="bottom"> <%=allMovies[i].title%></span> -->
       </div>
       <%}%>
   </div>
