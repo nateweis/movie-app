@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <%include ../partials/head.ejs %>
+    <link rel="stylesheet" href="/css/form.css">
   </head>
   <body>
     <div class="container">
@@ -17,7 +18,7 @@
         if(allMovies[i].addedBy === currentUser.username){ %>
         <div class="movie-box">
           <%include ../partials/movie-display.ejs %>
-          <form action="/movies/<%=allMovies[i].id%>?_method=DELETE" method="post">
+          <form class="removeBtn" action="/movies/<%=allMovies[i].id%>?_method=DELETE" method="post">
             <input type="submit" value="Remove">
           </form>
           <button><a href="/movies/edit/<%=allMovies[i].id%>">Edit</a></button>

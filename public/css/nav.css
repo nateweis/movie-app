@@ -1,27 +1,46 @@
+/*--- Login/signup form styles  */
 .side{
   float: right;
 }
 .modal{
     display: none;
     width:300px;
-    height: 200px;
+    height: 220px;
     position: fixed;
-    top: 10%;
+    top: 1%;
     left: 30%;
     z-index: 10;
-    background: url('/img/background5.jpeg');
+    background: rgba(0, 0, 0, 0.8);
     border: 2px solid #ddd;
   }
   .userForm{
-    width:200px;
-    margin-left: 80px;
+    width:130px;
+    margin-left: 90px;
+  }
+  .userForm h4{
+    text-align: center;
   }
   .userForm input{
     display: block;
+    width:100%;
+  }
+  .userForm input[type="submit"]{
+    background: rgb(0,50,0);
+    color: #ddd;
+    height:30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .userForm input[type="submit"]:hover{
+    background: rgb(0,80,0);
   }
 .x{
   float: right;
+  padding-right: 5px;
+  cursor: pointer;
 }
+/*---- Nav bar dropdown styles ------*/
 .nav, .drop-1, .drop-2{
   display: flex;
   justify-content: center;

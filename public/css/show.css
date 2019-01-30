@@ -2,6 +2,7 @@
   font-family: "hollow";
   src: url('/img/Rainbow Colors - TTF.ttf');
 }
+/*---- All just styles for the 'screen' -----*/
 .screen{
   width:80%;
   height: 300px;
@@ -27,23 +28,6 @@
   top:85%;
   left:83%;
 }
-.fave, .not-fave{
-  background: none;
-  font-size: 30px;
-  border: none;
-  position: absolute;
-  top: 85%;
-  left: 90%;
-  color: #ddd;
-  outline: none;
-  cursor: pointer;
-}
-
-.not-fave{
-  font-family: 'hollow';
-  font-size: 50px;
-  top:84%;
-}
 .play-btn{
   background: black;
   width:100px;
@@ -68,4 +52,22 @@ border-color: transparent transparent transparent #fff;
 .play-btn:hover{
   border: 1px solid #ddd;
   cursor: pointer;
+}
+/*----- Alternate size and position for fave btn for screen ------*/
+.fave, .not-fave{
+  background: none;
+  font-size: 30px;
+  border: none;
+  position: absolute;
+  top: 85%;
+  left: 90%;
+  color: #ddd;
+  outline: none;
+  cursor: pointer;
+}
+
+.not-fave{
+  font-family: 'hollow';
+  font-size: 50px;
+  top:84%;
 }
