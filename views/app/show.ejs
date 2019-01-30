@@ -38,12 +38,13 @@
           <%}}%>
 
           <span class="play-btn"> <span class="triangle"></span> </span>
+          <span class="sm-triangle"></span>
           <input type="range" value="0" class="slider">
           <p class="runtime"><%=allMovies[i].runtime%></p>
         </span>
         <img src="<%=allMovies[i].img[j]%>" alt="">
       </div>
-        <p>Written By: <%=allMovies[i].writer%></p>
+        <p>Directed By: <%=allMovies[i].writer%></p>
         <p>
           Starring: <%if(allMovies[i].starring.length > 1){
             for(let j = 0; j < allMovies[i].starring.length; j++){%>

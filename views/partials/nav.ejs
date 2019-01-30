@@ -25,6 +25,7 @@
     <div class="flex-item" id='catigory'><h4>Categories</h4></div>
     <div class="flex-item" id='year'><h4>Year</h4></div>
     <div class="flex-item" id='rated'><h4>Rating</h4></div>
+    <!-- <div class="flex-item" id='S'><h4>S</h4></div> -->
 
   </div>
 
@@ -82,23 +83,9 @@
     <%} %>
   </div>
 
+  <!-- <div class="hidden drop-2 S">
+    <input type="text" name="" value="">
+  </div> -->
 
 
 </nav>
-
-<!-- dynamic catigory select -->
-<!--1)first make an empty arr in ejs
-    2)then loop through all the movies
-    3)then loop through each movies catigory arr in the movie loop
-    4)have it that if that catigory isnt in the new emptyArr yet push it input
-
-    5)now you have a new arr with all the catiogries, loop through it and
-    make each one its own li with its own link
-    6)make the li link its own /:id result that leads to its own index rout
-    7)in the index rout say /app/carigories/:id, make it
-    find({catigoires:req.params.id},af) and itll only return the movies
-    with that catigory in it
-    8)or you could return all the movies and save on the render the req.
-    params.id to a key and use that key to filter out the page population
-    on the page itself
- -->

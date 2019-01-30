@@ -63,6 +63,7 @@ router.get('/favorites',(req,res) => {
   })
 })
 
+
 // edit movie
 router.get('/edit/:id',(req,res) => {
   Movie.findById(req.params.id, (err,data) => {
@@ -103,6 +104,8 @@ router.post('/',(req,res) => {
     res.redirect('/movies/userpg')
   })
 })
+
+
 
 
 // delete the movie

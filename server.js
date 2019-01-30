@@ -45,7 +45,9 @@ app.use('/movies',movieRouts)
 const userRouts = require('./controller/user-rout.js')
 app.use('/user',userRouts)
 
-
+// app.get('/',(req,res) => {
+//   res.render('opening.ejs')
+// })
 
 app.listen(port,() => {
   console.log("Ready for some routs......");

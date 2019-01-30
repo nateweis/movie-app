@@ -49,6 +49,16 @@ border-color: transparent transparent transparent #fff;
   top:15%;
   left: 35%;
 }
+.sm-triangle{
+  width: 0;
+height: 0;
+border-style: solid;
+border-width:  6.5px 0 6.5px 11.3px;
+border-color: transparent transparent transparent #fff;
+position: absolute;
+top:91%;
+left: 5%;
+}
 .play-btn:hover{
   border: 1px solid #ddd;
   cursor: pointer;
@@ -70,4 +80,7 @@ border-color: transparent transparent transparent #fff;
   font-family: 'hollow';
   font-size: 50px;
   top:84%;
+}
+.fave:hover, .not-fave:hover{
+  background: none;
 }

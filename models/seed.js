@@ -12,6 +12,54 @@ module.exports = [
     rated:'PG-13'
   },
   {
+    title: 'The Godfather',
+    stars: 5,
+    writer:"Francis Ford Coppola",
+    starring:['Marlon Brando','Al Pacino','James Caan','Diane Keaton'],
+    img:['/img/the-godfather1.jpeg','/img/the-godfather2.jpeg'],
+    catigory:['crime','drama'],
+    runtime:175,
+    movieDescription:"The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+    year:1972,
+    rated:'R'
+  },
+  {
+    title: 'The Shawshank Redemption',
+    stars: 4,
+    writer:"Frank Darabont",
+    starring:['Tim Robbins','Morgan Freeman','Bob Gunton'],
+    img:['/img/shawshank1.jpeg','/img/shawshank2.jpeg'],
+    catigory:['drama'],
+    runtime:142,
+    movieDescription:"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    year:1994,
+    rated:'R'
+  },
+  {
+    title: 'E.T. The Extra-Terrestrial',
+    stars: 3,
+    writer:"Steven Spielberg",
+    starring:['Henry Thoman','Drew Barrymore','Dee Wallace'],
+    img:['/img/et1.jpeg','/img/et2.jpeg'],
+    catigory:['family','sci-fi'],
+    runtime:115,
+    movieDescription:"A troubled child summons the courage to help a friendly alien escape Earth and return to his home world.",
+    year:1982,
+    rated:'PG'
+  },
+  {
+    title: 'The Lord of the Rings',
+    stars: 4,
+    writer:"Peter Jackson",
+    starring:['Elijah Wood','Viggo Mortensen','Ian McKellen','Orlando Bloom'],
+    img:['/img/lotr1.jpeg','/img/lotr2.jpeg'],
+    catigory:['adventure','drama','fantasy','action'],
+    runtime:201,
+    movieDescription:"Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+    year:2003,
+    rated:'PG-13'
+  },
+  {
     title: 'Fantastic Beasts and Where to Find Them',
     stars:3,
     writer:'J. K. Rowling',
