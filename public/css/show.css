@@ -1,7 +1,8 @@
 @font-face {
   font-family: "hollow";
-  src: url('/img/Rainbow Colors - TTF.ttf');
+  src: url('/img/Horizon-Outlinetwo.otf');
 }
+
 /*---- All just styles for the 'screen' -----*/
 .screen{
   width:80%;
@@ -78,8 +79,9 @@ left: 5%;
 
 .not-fave{
   font-family: 'hollow';
-  font-size: 50px;
-  top:84%;
+  font-size: 75px;
+  top:81%;
+  left: 89%;
 }
 .fave:hover, .not-fave:hover{
   background: none;

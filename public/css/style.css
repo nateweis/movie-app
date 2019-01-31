@@ -4,11 +4,16 @@
 }
 @font-face {
   font-family: "hollow";
-  src: url('/img/Rainbow Colors - TTF.ttf');
+  src: url('/img/Horizon-Outlinetwo.otf');
+}
+@font-face {
+  font-family: 'comfort';
+  src: url('/img/Comfortaa-Regular.ttf');
 }
 body{
   background-image: linear-gradient(to right, black , rgb(0,30,0));
   color:#ddd;
+  font-family: 'comfort';
 }
 .header{
   font-family: 'Header';
@@ -80,7 +85,8 @@ a{
 
 .isnt-favorite{
   font-family: 'hollow';
-  font-size: 50px;
+  font-size: 65px;
+  top:72%;
 }
 
 /*------ Login and out styleing (optional) ------*/

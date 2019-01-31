@@ -36,6 +36,18 @@ module.exports = [
     rated:'R'
   },
   {
+    title: 'Mad Max: Fury Road',
+    stars: 4,
+    writer:"George Miller",
+    starring:['Tom Hardy', 'Charlize Theron', 'Nicholas Hoult',' Zoë Kravitz'],
+    img:['/img/madmax1.jpeg','/img/madmax2.jpeg'],
+    catigory:['action','adventure','sci-fi'],
+    runtime:120,
+    movieDescription:"In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.",
+    year:2015,
+    rated:'R'
+  },
+  {
     title: 'E.T. The Extra-Terrestrial',
     stars: 3,
     writer:"Steven Spielberg",
@@ -58,6 +70,42 @@ module.exports = [
     movieDescription:"Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
     year:2003,
     rated:'PG-13'
+  },
+  {
+    title: 'Inside Out',
+    stars: 2,
+    writer:"Peter Docter",
+    starring:['Amy Poehler', 'Bill Hader', 'Lewis Black', 'Mindy Kaling'],
+    img:['/img/inside-out1.jpeg','/img/inside-out2.jpeg'],
+    catigory:['animation','comedy','disney'],
+    runtime:95,
+    movieDescription:"After young Riley is uprooted from her Midwest life and moved to San Francisco, her emotions - Joy, Fear, Anger, Disgust and Sadness - conflict on how best to navigate a new city, house, and school.",
+    year:2015,
+    rated:'PG'
+  },
+  {
+    title: 'Titanic',
+    stars: 4,
+    writer:"James Cameron",
+    starring:['Leonardo DiCaprio', 'Kate Winslet', 'Billy Zane', 'Kathy Bates'],
+    img:['/img/titanic1.jpeg','/img/titanic2.jpeg'],
+    catigory:['drama','romance'],
+    runtime:194,
+    movieDescription:"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+    year:1997,
+    rated:'PG-13'
+  },
+  {
+    title: 'Gladiator',
+    stars: 3,
+    writer:"Ridley Scott",
+    starring:['Russel Crowe',' Joaquin Phoenix','Connie Nielsen','Oliver Reed'],
+    img:['/img/gladiator1.jpeg','/img/gladiator2.jpeg'],
+    catigory:['adventure','drama','action'],
+    runtime:155,
+    movieDescription:"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+    year:2000,
+    rated:'R'
   },
   {
     title: 'Fantastic Beasts and Where to Find Them',
