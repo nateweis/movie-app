@@ -1,0 +1,64 @@
+<div class="nav">
+  <div class="flex-item"><a href="/movies">Home</a></div>
+  <div class="search flex-item"><a href="#">Search</a>
+
+  </div>
+  <%if(currentUser){%>
+    <div class="flex-item"><a href="/movies/favorites">Favorites</a></div>
+    <div class="flex-item"><a href="/movies/userpg">User</a></div>
+  <%}%>
+</div>
+
+<div class="hidden drop-1">
+  <div class="flex-item" id='catigory'>Catigory
+    <ul>
+      <%const catigoryArr = []
+        for (let i = 0; i < allMovies.length; i++) {
+          for (let j = 0;j < allMovies[i].catigory.length; j++) {
+            if(catigoryArr.indexOf(allMovies[i].catigory[j]) === -1){
+              catigoryArr.push(allMovies[i].catigory[j])
+            }
+          }
+        }
+        catigoryArr.sort()
+       %>
+
+      <% for (let target of catigoryArr) { %>
+        <li><a  href="/movies/categories/<%=target%>"><%=target%></a></li>
+      <%} %>
+    </ul>
+  </div>
+  <div class="flex-item" id='year'>Year
+    <ul>
+      <% const yearArr =[]
+      for (let i = 0; i < allMovies.length; i++) {
+        if(yearArr.indexOf(allMovies[i].year) === -1){
+          yearArr.push(allMovies[i].year)
+        }
+      }
+      yearArr.sort()
+      %>
+
+      <%for (let target of yearArr) { %>
+      <li><a  href="/movies/year/<%=target%>"><%=target%></a></li>
+      <%} %>
+
+    </ul>
+  </div>
+  <div class="flex-item" id='rated'>Rating
+    <ul>
+      <% const ratedArr =[]
+      for (let i = 0; i < allMovies.length; i++) {
+        if(ratedArr.indexOf(allMovies[i].rated) === -1){
+          ratedArr.push(allMovies[i].rated)
+        }
+      }
+      ratedArr.sort()
+      %>
+
+      <%for (let target of ratedArr) { %>
+        <li><a href="/movies/rating/<%=target%>"><%=target%></a></li>
+      <%} %>
+    </ul>
+  </div>
+</div>

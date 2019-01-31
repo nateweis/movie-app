@@ -41,7 +41,7 @@
   cursor: pointer;
 }
 /*---- Nav bar dropdown styles ------*/
-.nav, .drop-1, .drop-2{
+.nav, .drop-1,.drop-2{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -49,8 +49,9 @@
   width:70%;
   margin: 0 auto;
   background-image: linear-gradient(to left, black, rgb(0,50,0));
-
+  position: relative;
 }
+
 .drop-1, .drop-2{
   animation-duration: .5s;
   animation-name: slidein;
@@ -66,6 +67,7 @@
 .flex-item:hover{
   background: rgba(255, 255, 255, 0.1);
 }
+
 
 @keyframes slidein {
   0%{position: relative; top: -20px;}
