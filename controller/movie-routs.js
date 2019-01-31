@@ -137,4 +137,10 @@ router.get('/seed/extradata/exclusiveseed',(req,res) => {
   })
 })
 
+router.get('/drop/everthing/dangerouse/dontdoit',(req,res) => {
+  Movie.remove({},(err,data) => {
+    res.redirect('/movies')
+  })
+})
+
 module.exports = router
