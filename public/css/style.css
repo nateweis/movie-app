@@ -57,6 +57,7 @@ a{
   height:150px;
   position: absolute;
   z-index: 2;
+  transition: .3s all ease;
 }
 
 .movie-hover:hover{
@@ -95,6 +96,7 @@ a{
   color: #ddd;
   border-radius: 5px;
   cursor: pointer;
+  transition: .2s all ease;
 }
 
  button:hover,input[type='submit']:hover{

@@ -133,7 +133,7 @@ router.put('/:id',(req,res) => {
 const movieSeed = require('../models/seed.js')
 router.get('/seed/extradata/exclusiveseed',(req,res) => {
   Movie.insertMany(movieSeed,(err,data) => {
-    res.send(data)
+    res.redirect('/movies')
   })
 })
 
