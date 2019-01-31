@@ -57,7 +57,7 @@ a{
   height:150px;
   position: absolute;
   z-index: 2;
-  transition: .3s all ease;
+  transition: .2s all ease;
 }
 
 .movie-hover:hover{
